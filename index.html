@@ -1,34 +1,132 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Braylon’s Video Game Website</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyobi Games | One-Stop Center</title>
     <style>
-      body { font-family: Arial, sans-serif; margin: 40px; }
-      .card { border: 2px solid #ddd; padding: 16px; border-radius: 12px; max-width: 700px; }
-      h1 { margin-top: 0; }
-      button { padding: 10px 14px; border-radius: 10px; border: 0; cursor: pointer; }
-      .muted { color: #555; }
+        :root {
+            --bg-dark: #02021a;
+            --accent-pink: #ff007f;
+            --text-red: #e60000;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Orbitron, sans-serif;
+            background-color: var(--bg-dark);
+            color: white;
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* Introduction Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+            background: linear-gradient(rgba(2,2,26,0.7), rgba(2,2,26,0.7)), url('Introduction.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 { font-size: 4rem; margin-bottom: 10px; text-transform: uppercase; }
+        .btn {
+            background-color: var(--accent-pink);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* About Section */
+        .about-title { color: var(--text-red); font-size: 2.5rem; }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        /* Pricing Table Styling */
+        .price-card {
+            background: white;
+            color: black;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-top: 100px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
     </style>
-  </head>
-  <body>
-    <div class="card">
-      <h1>Braylon Games 🎮</h1>
-      <p class="muted">This is my real website. I’m learning web development.</p>
+</head>
+<body>
 
-      <h2>My Games</h2>
-      <ul>
-        <li><b>Space Runner</b> — dodge asteroids</li>
-        <li><b>Dungeon Quest</b> — find loot, beat the boss</li>
-        <li><b>Pixel Soccer</b> — power-ups, chaos</li>
-      </ul>
+    <section class="hero">
+        <h2>KYOBI GAMES</h2>
+        <h1>Your one-stop<br>video game center</h1>
+        <a href="#" class="btn">SHOP NOW ➔</a>
+        <p style="margin-top:40px;">Arnold Juan Hernández</p>
+    </section>
 
-      <button onclick="alert('Braylon clicked the button!')">Click Me</button>
+    <section id="about">
+        <h2 class="about-title">ABOUT THE COMPANY</h2>
+        <p>IN THIS ORGANIZATION WE WANT TO HELP YOU WITH WHAT YOU NEED OR TAKE YOUR SUGGESTIONS LIKE IF YOU HAVE A VIDEO GAME IDEA WE CAN DESIGN IT AND PUBLISH IT FOR YOU</p>
+        
+        <div class="grid-2">
+            <img src="About The Company.png" alt="Gaming" style="width:100%; border-radius:10px;">
+            <div style="text-align:left;">
+                <h3 style="color:var(--accent-pink)">ROLE-PLAYING GAMES</h3>
+                <p>Lose yourself in exotic worlds where your mission is to save the day.</p>
+                <a href="#" class="btn">SEE MORE ➔</a>
+            </div>
+        </div>
+    </section>
 
-      <p style="margin-top:18px;">
-        Contact: <a href="mailto:example@email.com">example@email.com</a>
-      </p>
-    </div>
-  </body>
+    <section id="team">
+        <h2 style="color:var(--text-red)">MEET THE TEAM</h2>
+        <div class="grid-2">
+            <img src="Meet The Team.png" alt="Team" style="width:100%;">
+            <ul style="list-style:none; color:var(--text-red); text-align:left; font-size:1.5rem;">
+                <li>KYLIE JONES</li>
+                <li>DANNY JONES</li>
+                <li>HARRY THOMAS</li>
+                <li>ALEX SCOTT</li>
+                <li>JENIFFER HERNANDEZ</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="prices">
+        <h1>PRICES</h1>
+        <img src="Prices.png" alt="Pricing Table" class="price-card">
+    </section>
+
+    <section class="disclaimer">
+        <h3>DISCLAIMER</h3>
+        <p>THIS WEBSITE IS FAKE. THIS IS ALL FOR A SCHOOL PROJECT.</p>
+    </section>
+
+</body>
 </html>
