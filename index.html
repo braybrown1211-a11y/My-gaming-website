@@ -3,38 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyobi Games</title>
+    <title>Kyobi Games | One-Stop Center</title>
     <style>
-        body { background-color: #02021a; color: white; font-family: sans-serif; margin: 0; text-align: center; }
-        section { padding: 40px 20px; border-bottom: 1px solid #1a1a3a; }
-        img { max-width: 100%; height: auto; border-radius: 8px; margin-top: 20px; }
-        h1 { color: #ff007f; text-transform: uppercase; letter-spacing: 2px; }
-        .intro-img { border: 2px solid #ff007f; }
+        :root {
+            --bg-dark: #02021a;
+            --accent-pink: #ff007f;
+            --text-red: #e60000;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-dark);
+            color: white;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        h1 { font-size: 3rem; color: white; margin: 10px 0; }
+        h2 { color: var(--text-red); font-size: 2rem; }
+        
+        /* The button styling */
+        .btn {
+            background-color: var(--accent-pink);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background-color: #ff3399;
+        }
+
+        .team-list {
+            list-style: none;
+            padding: 0;
+            color: var(--text-red);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
     <section>
-        <img src="Introduction.png" alt="Intro" class="intro-img">
+        <img src="Introduction.png" alt="Kyobi Games Intro">
+        <h1>Your one-stop<br>video game center</h1>
+        
+        <a href="snake.html" class="btn" style="background-color: #00f2ff; color: #02021a;">🎮 PLAY KYOBI SNAKE</a>
+        
+        <a href="#" class="btn">SHOP NOW ➔</a>
+        <p>Arnold Juan Hernández</p>
     </section>
 
     <section>
-        <h1>About</h1>
-        <img src="About%20The%20Company.png" alt="About">
+        <h2>ABOUT THE COMPANY</h2>
+        <p>IN THIS ORGANIZATION WE WANT TO HELP YOU WITH WHAT YOU NEED OR TAKE YOUR SUGGESTIONS LIKE IF YOU HAVE A VIDEO GAME IDEA WE CAN DESIGN IT AND PUBLISH IT FOR YOU</p>
+        <img src="About%20The%20Company.png" alt="About Company">
+        <h3 style="color:var(--accent-pink)">ROLE-PLAYING GAMES</h3>
+        <p>Lose yourself in exotic worlds where your mission is to save the day.</p>
+        <a href="#" class="btn">SEE MORE ➔</a>
     </section>
 
     <section>
-        <h1>Meet The Team</h1>
-        <img src="Meet%20The%20Team.png" alt="Team">
+        <h2>MEET THE TEAM</h2>
+        <img src="Meet%20The%20Team.png" alt="The Team">
+        <ul class="team-list">
+            <li>KYLIE JONES</li>
+            <li>DANNY JONES</li>
+            <li>HARRY THOMAS</li>
+            <li>ALEX SCOTT</li>
+            <li>JENIFFER HERNANDEZ</li>
+        </ul>
     </section>
 
     <section>
-        <h1>Prices</h1>
-        <img src="Prices.png" alt="Pricing Table">
+        <h1>PRICES</h1>
+        <img src="Prices.png" alt="Prices Table">
     </section>
 
-    <section style="opacity: 0.5;">
-        <img src="Disclamer.png" alt="Disclaimer">
+    <section style="opacity: 0.6; padding-top: 100px;">
+        <img src="Disclamer.png" alt="Disclaimer" style="max-width: 600px;">
     </section>
 
 </body>
