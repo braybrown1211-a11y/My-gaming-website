@@ -1,79 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Kyobi Snake</title>
-  <style>
-    body { background: #02021a; color: white; text-align: center; font-family: sans-serif; }
-    canvas { border: 5px solid #ff007f; background: #000; margin-top: 20px; }
-    .back-btn { display: inline-block; margin-top: 20px; color: #ff007f; text-decoration: none; border: 1px solid #ff007f; padding: 10px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyobi Games | One-Stop Center</title>
+    <style>
+        :root {
+            --bg-dark: #02021a;
+            --accent-pink: #ff007f;
+            --text-red: #e60000;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-dark);
+            color: white;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        h1 { font-size: 3rem; color: white; margin: 10px 0; }
+        h2 { color: var(--text-red); font-size: 2rem; }
+        
+        /* The button styling */
+        .btn {
+            background-color: var(--accent-pink);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background-color: #ff3399;
+        }
+
+        .team-list {
+            list-style: none;
+            padding: 0;
+            color: var(--text-red);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-  <h1>KYOBI SNAKE</h1>
-  <p>Score: <span id="score">0</span></p>
-  <canvas id="snakeGame" width="400" height="400"></canvas>
-  <br>
-  <a href="index.html" class="back-btn">← BACK TO HOME</a>
 
-  <script>
-    const canvas = document.getElementById("snakeGame");
-    const ctx = canvas.getContext("2d");
-    const scoreElement = document.getElementById("score");
+    <section>
+        <img src="Introduction.png" alt="Kyobi Games Intro">
+        <h1>Your one-stop<br>video game center</h1>
+        
+        <a href="snake.html" class="btn" style="background-color: #00f2ff; color: #02021a;">🎮 PLAY KYOBI SNAKE</a>
+        
+        <a href="#" class="btn">SHOP NOW ➔</a>
+        <p>Arnold Juan Hernández</p>
+    </section>
 
-    let box = 20;
-    let score = 0;
-    let snake = [{x: 10 * box, y: 10 * box}];
-    let food = { x: Math.floor(Math.random() * 19 + 1) * box, y: Math.floor(Math.random() * 19 + 1) * box };
-    let d;
+    <section>
+        <h2>ABOUT THE COMPANY</h2>
+        <p>IN THIS ORGANIZATION WE WANT TO HELP YOU WITH WHAT YOU NEED OR TAKE YOUR SUGGESTIONS LIKE IF YOU HAVE A VIDEO GAME IDEA WE CAN DESIGN IT AND PUBLISH IT FOR YOU</p>
+        <img src="About%20The%20Company.png" alt="About Company">
+        <h3 style="color:var(--accent-pink)">ROLE-PLAYING GAMES</h3>
+        <p>Lose yourself in exotic worlds where your mission is to save the day.</p>
+        <a href="#" class="btn">SEE MORE ➔</a>
+    </section>
 
-    document.addEventListener("keydown", direction);
-    function direction(event) {
-      if(event.keyCode == 37 && d != "RIGHT") d = "LEFT";
-      else if(event.keyCode == 38 && d != "DOWN") d = "UP";
-      else if(event.keyCode == 39 && d != "LEFT") d = "RIGHT";
-      else if(event.keyCode == 40 && d != "UP") d = "DOWN";
-    }
+    <section>
+        <h2>MEET THE TEAM</h2>
+        <img src="Meet%20The%20Team.png" alt="The Team">
+        <ul class="team-list">
+            <li>KYLIE JONES</li>
+            <li>DANNY JONES</li>
+            <li>HARRY THOMAS</li>
+            <li>ALEX SCOTT</li>
+            <li>JENIFFER HERNANDEZ</li>
+        </ul>
+    </section>
 
-    function draw() {
-      ctx.fillStyle = "black";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    <section>
+        <h1>PRICES</h1>
+        <img src="Prices.png" alt="Prices Table">
+    </section>
 
-      for(let i = 0; i < snake.length; i++) {
-        ctx.fillStyle = (i == 0) ? "#ff007f" : "white";
-        ctx.fillRect(snake[i].x, snake[i].y, box, box);
-      }
+    <section style="opacity: 0.6; padding-top: 100px;">
+        <img src="Disclamer.png" alt="Disclaimer" style="max-width: 600px;">
+    </section>
 
-      ctx.fillStyle = "red";
-      ctx.fillRect(food.x, food.y, box, box);
-
-      let snakeX = snake[0].x;
-      let snakeY = snake[0].y;
-
-      if( d == "LEFT") snakeX -= box;
-      if( d == "UP") snakeY -= box;
-      if( d == "RIGHT") snakeX += box;
-      if( d == "DOWN") snakeY += box;
-
-      if(snakeX == food.x && snakeY == food.y) {
-        score++;
-        scoreElement.innerHTML = score;
-        food = { x: Math.floor(Math.random() * 19 + 1) * box, y: Math.floor(Math.random() * 19 + 1) * box };
-      } else {
-        snake.pop();
-      }
-
-      let newHead = { x: snakeX, y: snakeY };
-
-      if(snakeX < 0 || snakeX >= canvas.width || snakeY < 0 || snakeY >= canvas.height) {
-        clearInterval(game);
-        alert("GAME OVER! Final Score: " + score);
-        location.reload();
-      }
-
-      snake.unshift(newHead);
-    }
-
-    let game = setInterval(draw, 100);
-  </script>
 </body>
 </html>
