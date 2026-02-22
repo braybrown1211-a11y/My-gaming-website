@@ -9,6 +9,7 @@
             --bg-dark: #02021a;
             --accent-pink: #ff007f;
             --text-red: #e60000;
+            --game-blue: #00f2ff;
         }
 
         body {
@@ -35,9 +36,8 @@
         }
 
         h1 { font-size: 3rem; color: white; margin: 10px 0; }
-        h2 { color: var(--text-red); font-size: 2rem; }
+        h2 { color: var(--text-red); font-size: 2.2rem; text-transform: uppercase; }
         
-        /* The button styling */
         .btn {
             background-color: var(--accent-pink);
             color: white;
@@ -46,13 +46,18 @@
             text-decoration: none;
             font-weight: bold;
             display: inline-block;
-            margin: 10px;
-            transition: 0.3s;
+            margin: 15px 5px;
+            transition: 0.3s ease;
         }
 
         .btn:hover {
             transform: scale(1.1);
-            background-color: #ff3399;
+            filter: brightness(1.2);
+        }
+
+        .game-btn {
+            background-color: var(--game-blue);
+            color: var(--bg-dark);
         }
 
         .team-list {
@@ -70,34 +75,33 @@
         <img src="Introduction.png" alt="Kyobi Games Intro">
         <h1>Your one-stop<br>video game center</h1>
         
-        <a href="snake.html" class="btn" style="background-color: #00f2ff; color: #02021a;">🎮 PLAY KYOBI SNAKE</a>
+        <a href="snake.html" class="btn game-btn">🎮 PLAY KYOBI SNAKE</a>
         
-        <a href="#" class="btn">SHOP NOW ➔</a>
+        <a href="#prices" class="btn">SHOP NOW ➔</a>
         <p>Arnold Juan Hernández</p>
     </section>
 
     <section>
-        <h2>ABOUT THE COMPANY</h2>
+        <h2>About The Company</h2>
         <p>IN THIS ORGANIZATION WE WANT TO HELP YOU WITH WHAT YOU NEED OR TAKE YOUR SUGGESTIONS LIKE IF YOU HAVE A VIDEO GAME IDEA WE CAN DESIGN IT AND PUBLISH IT FOR YOU</p>
         <img src="About%20The%20Company.png" alt="About Company">
         <h3 style="color:var(--accent-pink)">ROLE-PLAYING GAMES</h3>
         <p>Lose yourself in exotic worlds where your mission is to save the day.</p>
-        <a href="#" class="btn">SEE MORE ➔</a>
     </section>
 
     <section>
-        <h2>MEET THE TEAM</h2>
+        <h2>Meet The Team</h2>
         <img src="Meet%20The%20Team.png" alt="The Team">
         <ul class="team-list">
             <li>KYLIE JONES</li>
             <li>DANNY JONES</li>
             <li>HARRY THOMAS</li>
             <li>ALEX SCOTT</li>
-            <li>JENIFFER HERNANDEZ</li>
+            <li>JENIFFER HERENANDEZ</li>
         </ul>
     </section>
 
-    <section>
+    <section id="prices">
         <h1>PRICES</h1>
         <img src="Prices.png" alt="Prices Table">
     </section>
