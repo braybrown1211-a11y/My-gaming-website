@@ -3,129 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyobi Games | One-Stop Center</title>
+    <title>Kyobi Games</title>
     <style>
-        :root {
-            --bg-dark: #02021a;
-            --accent-pink: #ff007f;
-            --text-red: #e60000;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Orbitron, sans-serif;
-            background-color: var(--bg-dark);
-            color: white;
-            line-height: 1.6;
-        }
-
-        section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: auto;
-            text-align: center;
-        }
-
-        /* Introduction Hero Section */
-        .hero {
-            height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            text-align: left;
-            background: linear-gradient(rgba(2,2,26,0.7), rgba(2,2,26,0.7)), url('Introduction.png');
-            background-size: cover;
-            background-position: center;
-        }
-
-        h1 { font-size: 4rem; margin-bottom: 10px; text-transform: uppercase; }
-        .btn {
-            background-color: var(--accent-pink);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* About Section */
-        .about-title { color: var(--text-red); font-size: 2.5rem; }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            margin-top: 40px;
-        }
-
-        /* Pricing Table Styling */
-        .price-card {
-            background: white;
-            color: black;
-            border-radius: 10px;
-            padding: 20px;
-            max-width: 500px;
-            margin: auto;
-        }
-
-        .disclaimer {
-            font-size: 0.8rem;
-            opacity: 0.6;
-            margin-top: 100px;
-            border-top: 1px solid #333;
-            padding-top: 20px;
-        }
+        body { background-color: #02021a; color: white; font-family: sans-serif; margin: 0; text-align: center; }
+        section { padding: 40px 20px; border-bottom: 1px solid #1a1a3a; }
+        img { max-width: 100%; height: auto; border-radius: 8px; margin-top: 20px; }
+        h1 { color: #ff007f; text-transform: uppercase; letter-spacing: 2px; }
+        .intro-img { border: 2px solid #ff007f; }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <h2>KYOBI GAMES</h2>
-        <h1>Your one-stop<br>video game center</h1>
-        <a href="#" class="btn">SHOP NOW ➔</a>
-        <p style="margin-top:40px;">Arnold Juan Hernández</p>
+    <section>
+        <img src="Introduction.png" alt="Intro" class="intro-img">
     </section>
 
-    <section id="about">
-        <h2 class="about-title">ABOUT THE COMPANY</h2>
-        <p>IN THIS ORGANIZATION WE WANT TO HELP YOU WITH WHAT YOU NEED OR TAKE YOUR SUGGESTIONS LIKE IF YOU HAVE A VIDEO GAME IDEA WE CAN DESIGN IT AND PUBLISH IT FOR YOU</p>
-        
-        <div class="grid-2">
-            <img src="About The Company.png" alt="Gaming" style="width:100%; border-radius:10px;">
-            <div style="text-align:left;">
-                <h3 style="color:var(--accent-pink)">ROLE-PLAYING GAMES</h3>
-                <p>Lose yourself in exotic worlds where your mission is to save the day.</p>
-                <a href="#" class="btn">SEE MORE ➔</a>
-            </div>
-        </div>
+    <section>
+        <h1>About</h1>
+        <img src="About%20The%20Company.png" alt="About">
     </section>
 
-    <section id="team">
-        <h2 style="color:var(--text-red)">MEET THE TEAM</h2>
-        <div class="grid-2">
-            <img src="Meet The Team.png" alt="Team" style="width:100%;">
-            <ul style="list-style:none; color:var(--text-red); text-align:left; font-size:1.5rem;">
-                <li>KYLIE JONES</li>
-                <li>DANNY JONES</li>
-                <li>HARRY THOMAS</li>
-                <li>ALEX SCOTT</li>
-                <li>JENIFFER HERNANDEZ</li>
-            </ul>
-        </div>
+    <section>
+        <h1>Meet The Team</h1>
+        <img src="Meet%20The%20Team.png" alt="Team">
     </section>
 
-    <section id="prices">
-        <h1>PRICES</h1>
-        <img src="Prices.png" alt="Pricing Table" class="price-card">
+    <section>
+        <h1>Prices</h1>
+        <img src="Prices.png" alt="Pricing Table">
     </section>
 
-    <section class="disclaimer">
-        <h3>DISCLAIMER</h3>
-        <p>THIS WEBSITE IS FAKE. THIS IS ALL FOR A SCHOOL PROJECT.</p>
+    <section style="opacity: 0.5;">
+        <img src="Disclamer.png" alt="Disclaimer">
     </section>
 
 </body>
